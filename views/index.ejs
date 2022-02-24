@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Name collector</h1>
+    <form action="/quotes" method="POST">
+        <input type="text" placeholder="first name" name="name">
+        <input type="text" placeholder="last name" name="quote">
+        <button type="submit">Submit</button>
+    </form>
+    <h2> List of names </h2>
+
+<ul class="quotes">
+  <% for(var i = 0; i < quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+</ul>
+
+<div>
+  <h2>Delete Names</h2>
+  <p>
+   delete the name if you have entered a wrong name by mistake
+  </p>
+  <button id="delete-button">Delete name</button>
+</div>
+<script src="../public/main.js"></script>
+</body>
+</html>
